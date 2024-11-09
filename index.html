@@ -3,57 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>https://Clínica de Dermatología lime.com</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Clínica de Dermatología</title>
+    <link rel="stylesheet" href="index.css">
 </head>
-<body>
-    <header>
-        <h1>Bienvenid@ a la clinica dermatologica LIME</h1>
-        <img src="imagenes del proyecto/laboratorio.jpeg" width="300" height="180" alt="Logo de la clinica">
-        <nav>
-            <ul>
-                <li><a href="https://www.laboratoriolime.com/">Nosotros</a></li>
-                <li><a href="https://www.google.com/maps/dir//hospital+alma+mater+de+antioquia,+Cl.+64+%2351-31,+La+Candelaria,+Medell%C3%ADn,+La+Candelaria,+Medell%C3%ADn,+Antioquia/@6.2613932,-75.6473508,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x8e4429e011f17e0b:0xb636d58134fedf7b!2m2!1d-75.5649489!2d6.2613996?entry=ttu&g_ep=EgoyMDI0MDkwNC4wIKXMDSoASAFQAw%3D%3D">ubicacion</a></li>
-                <li><a href="https://www.facebook.com/LIMEUdeA/?locale=es_LA">Contacto</a></li>
-                <br /><br /><br /><br />
-                <img src="imagenes del proyecto/lime 2.jpeg" width="225" height="225">"
-            </ul>
-        </nav>
+<body class="body">
+    <header class="header">
+        <h1>Clínica Dermatológica</h1>
+        <p>Especialistas en el cuidado de la piel</p>
     </header>
 
-    <section id="about">
-        <h2>Sobre Nosotros</h2>
-        <p>En nuestra clínica, ofrecemos una gama completa de servicios dermatológicos...</p>
+    <section class="avion">
+        <div class="input-group">
+            <label for="appointment">Agenda:</label>
+            <select id="appointment">
+                <option value="">Seleccionar...</option>
+                <option value="user">Usuario</option>
+                <option value="doctor">Médico</option>
+                <option value="time">Hora</option>
+                <option value="date">Fecha</option>
+            </select>
+        </div>
+        <div class="input-group" id="user-field" style="display: none;">
+            <label for="user">Usuario:</label>
+            <input type="text" id="user" placeholder="Nombre del paciente">
+        </div>
+        <div class="input-group" id="doctor-field" style="display: none;">
+            <label for="doctor">Médico:</label>
+            <input type="text" id="doctor" placeholder="Nombre del médico">
+        </div>
+        <div class="input-group" id="time-field" style="display: none;">
+            <label for="time">Hora:</label>
+            <input type="time" id="time">
+        </div>
+        <div class="input-group" id="date-field" style="display: none;">
+            <label for="date">Fecha:</label>
+            <input type="date" id="date">
+        </div>
+        <button id="schedule-button">Agenda Cita</button>
     </section>
 
-    <section id="services">
-        <h2>Servicios</h2>
-        <ul>
-            <li>Consulta Dermatológica</li>
-            <li>Tratamientos para Acné</li>
-            <li>Rejuvenecimiento Facial</li>
-            <!-- Más servicios -->
-        </ul>
-    </section>
+    <main>
+        <section class="calendar hero">
+            <h2>Calendario de Citas</h2>
+            <ol class="calendar-list" id="appointments-list">
+                <li class="appointment">Lunes: 10:00 - Revisión piel</li>
+                <li class="appointment">Martes: 11:00 - Tratamiento del acné</li>
+                <li class="appointment">Miércoles: 12:00 - Consulta general</li>
+                <li class="appointment">Jueves: 10:30 - Control lunar</li>
+                <li class="appointment">Viernes: 14:00 - Rejuvenecimiento</li>
+            </ol>
+        </section>
 
-    <section id="contact">
-        <h2>Contacto</h2>
-        <form action="send-message.php" method="post">
-            <label for="name">Nombre:</label>
-            <input type="text" id="name" name="name" required>
-        </br>     
-            <label for="email">Correo Electrónico:</label>
-            <input type="email" id="email" name="email" required>
-            <br>
-            <label for="message">Mensaje:</label>
-            <textarea id="message" name="message" required></textarea>
-            <br></br>
-            <button type="submit">Enviar</button>
-        </form>
-    </section>
+        <section class="servicios taco">
+            <h2>Nuestros Servicios</h2>
+            <ul>
+                <li>Consulta Dermatológica - Examen completo de la piel para detectar anomalías.</li>
+                <li>Tratamiento para Acné - Tratamientos efectivos para reducir el acné.</li>
+                <li>Rejuvenecimiento Facial - Procedimientos para mejorar la apariencia de la piel.</li>
+                <li>Cuidado de Lunares - Revisión y eliminación de lunares peligrosos.</li>
+                <li>Prevención de Cáncer de Piel - Detección temprana y prevención del cáncer de piel.</li>
+            </ul>
+            <p id="info-text">Pasa el cursor sobre un servicio para ver más información.</p>
+        </section>
 
-    <footer>
-        <p>&copy; 2024 Clínica de Dermatología. Todos los derechos reservados.</p>
+        <section class="team carro">
+            <h2>Nuestro Equipo Médico</h2>
+            <div class="team-member">
+                <img src="imagenes/doctor_mike_gq_5080.webp" width="300" height="200" alt="Dr. Juan Pérez">
+                <h3>Dr. Juan Pérez</h3>
+                <p>Dermatólogo especializado en el tratamiento del acné y el rejuvenecimiento facial</p>
+            </div>
+            <div class="team-member">
+                <img src="imagenes/d02137e2afb167582c22fb98077f2265.jpg" width="325" height="200" alt="Dra. Ana López">
+                <h3>Dra. Ana López</h3>
+                <p>Especialista en cáncer de piel y cuidado de lunares, se enfoca en la detección temprana</p>
+            </div>
+            <div class="team-member">
+                <img src="imagenes/79d38c22fb7010d38f7037ad39ac4410.jpg" width="300" height="200" alt="Dra. Elena García">
+                <h3>Dra. Elena García</h3>
+                <p>Dermatóloga especializada en el cuidado de la piel y el rejuvenecimiento facial</p>
+            </div>
+            <div class="team-member">
+                <img src="imagenes/premium_photo-1658506671316-0b293df7c72b.jfif" width="253" height="200" alt="Dr. Luis Martínez">
+                <h3>Dr. Luis Martínez</h3>
+                <p>Dermatólogo especializado en el tratamiento del acné y el rejuvenecimiento facial</p>
+            </div>
+        </section>
+
+        <section class="blog jero">
+            <h2>Blog de Dermatología</h2>
+            <article>
+                <h3>¿Cómo prevenir el cáncer de piel?</h3>
+                <p>La prevención del cáncer de piel es fundamental...</p>
+                <a href="#">Leer más</a>
+            </article>
+            <article>
+                <h3>Beneficios del rejuvenecimiento facial</h3>
+                <p>El rejuvenecimiento facial es una opción segura y efectiva para revitalizar la piel...</p>
+                <a href="#">Leer más</a>
+            </article>
+        </section>
+
+        <section class="faq haro">
+            <h2>Preguntas Frecuentes</h2>
+            <div class="faq-item">
+                <h3>¿Cuántas sesiones necesito para ver resultados?</h3>
+                <p id="faq1" class="faq-answer">La cantidad de sesiones depende del tipo de tratamiento...</p>
+            </div>
+            <div class="faq-item">
+                <h3>¿Los tratamientos son dolorosos?</h3>
+                <p id="faq2" class="faq-answer">La mayoría de nuestros tratamientos son mínimamente invasivos...</p>
+            </div>
+        </section>
+
+        <section class="newsletter">
+            <h2>Suscríbete a nuestro boletín</h2>
+            <p>Recibe consejos de salud y novedades en tratamientos dermatológicos.</p>
+            <form action="subscribe.php" method="post" class="newsletter-form">
+                <input type="email" placeholder="Correo electrónico" required>
+                <button type="submit">Suscribirse</button>
+            </form>
+        </section>
+    </main>
+
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <h2>Cita Agendada</h2>
+            <p>Tu cita ha sido registrada exitosamente.</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section about">
+                <h3>Clínica Dermatológica Lima</h3>
+                <p>Especialistas en el cuidado de la piel. Ofrecemos servicios de dermatología avanzada y tratamientos personalizados para mejorar tu salud y bienestar.</p>
+            </div>
+            <div class="footer-section links">
+                <h4>Enlaces Rápidos</h4>
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Servicios</a></li>
+                    <li><a href="#">Equipo Médico</a></li>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-section social">
+                <h4>Síguenos</h4>
+                <a href="#"><img src="imagenes/facebook-2935402_640.png" alt="Facebook"></a>
+                <a href="#"><img src="imagenes/twitter-2935414_1280.png" alt="Twitter"></a>
+                <a href="#"><img src="imagenes/instagram-1882330_1920.png" alt="Instagram"></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>©️ 2024 Clínica de Dermatología Lima. Todos los derechos reservados.</p>
+        </div>
     </footer>
+
+    <script>
+        document.getElementById('appointment').addEventListener('change', function() {
+            document.getElementById('user-field').style.display = 'none';
+            document.getElementById('doctor-field').style.display = 'none';
+            document.getElementById('time-field').style.display = 'none';
+            document.getElementById('date-field').style.display = 'none';
+
+            if (this.value === 'user') {
+                document.getElementById('user-field').style.display = 'block';
+            } else if (this.value === 'doctor') {
+                document.getElementById('doctor-field').style.display = 'block';
+            } else if (this.value === 'time') {
+                document.getElementById('time-field').style.display = 'block';
+            } else if (this.value === 'date') {
+                document.getElementById('date-field').style.display = 'block';
+            }
+        });
+
+        document.getElementById('schedule-button').addEventListener('click', function() {
+            const user = document.getElementById('user').value;
+            const doctor = document.getElementById('doctor').value;
+            const time = document.getElementById('time').value;
+            const date = document.getElementById('date').value;
+
+            if (user && doctor && time && date) {
+                const appointmentsList = document.getElementById('appointments-list');
+                const newAppointment = document.createElement('li');
+                newAppointment.textContent = ${date} ${time}: ${user} con ${doctor};
+                appointmentsList.appendChild(newAppointment);
+
+                document.getElementById('modal').style.display = 'block';
+                setTimeout(() => {
+                    document.getElementById('modal').style.display = 'none';
+                }, 3000);
+            } else {
+                alert('Por favor, complete todos los campos requeridos.');
+            }
+        });
+    </script>
 </body>
 </html>
