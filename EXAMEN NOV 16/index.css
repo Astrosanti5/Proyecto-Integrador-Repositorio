@@ -1,0 +1,61 @@
+/* Estilo personalizado */
+body {
+    font-family: 'Verdana', sans-serif;
+    background-color: #f8f9fa; 
+    font-size: 1.1em; 
+    color: #333; 
+}
+
+h1, h2 {
+    color: #003366; 
+    font-size: 2.5em; 
+}
+
+.navbar-brand {
+    font-weight: bold;
+    color: #c4e9f3 !important; 
+    font-size: 1.4em; 
+}
+
+#destinos p {
+    font-size: 1.3em; 
+    color: #555; 
+}
+
+footer {
+    font-size: 1em; 
+    background: #00334d; 
+    color: white; 
+    padding: 15px 0; 
+}
+
+img {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); 
+    border-radius: 12px; 
+    width: 100%; 
+    height: auto; 
+}
+
+.btn-primary {
+    background-color: #00b3e6; 
+    border-color: #0099cc; 
+}
+
+.btn-primary:hover {
+    background-color: #0099cc; 
+    border-color: #0077b3;
+}
+img {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+}
+
+
+.btn-primary {
+    background-color: #1c5d99;
+    border: none;
+}
+
+.btn-primary:hover {
+    background-color: #144578;
+}

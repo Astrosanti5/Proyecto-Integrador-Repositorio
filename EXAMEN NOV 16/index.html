@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Explora los mejores destinos para ver las auroras boreales con Aventuras Boreales. Reserva tu viaje ahora y vive una experiencia inolvidable.">
+    <title>Aventuras Boreales</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <link rel="stylesheet" href="index.css">
+
+</head>
+<body>
+
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Aventuras Boreales: Descubre el mágico espectáculo de las auroras</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="#destinos">Destinos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#galeria">Galería</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#contacto">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <section id="destinos" class="container my-5">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <h1>Viaja a Ver las Auroras Boreales</h1>
+                <p>Explora la magia de las luces del norte en los destinos más espectaculares: Islandia, Noruega, Finlandia y más. Planifica tu aventura con nosotros y vive una experiencia inolvidable.</p>
+            </div>
+            <div class="col-md-6">
+                <img src="imagenes/pexels-margerretta-902756.jpg" class="img-fluid rounded" alt="Auroras boreales">
+            </div>
+        </div>
+    </section>
+
+    <section id="galeria" class="my-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Galería</h2>
+            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="imagenes/pexels-visit-greenland-108649-360912.jpg" class="d-block w-100" alt="Aurora boreal en Islandia">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagenes/pexels-tobiasbjorkli-1693085 persona.jpg" class="d-block w-100" alt="Aurora boreal en Noruega">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="imagenes/pexels-tomas-malik-793526-26690652 personas.jpg" class="d-block w-100" alt="Aurora boreal en Finlandia">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <section id="contacto" class="bg-light py-5">
+        <div class="container">
+            <h2 class="text-center mb-4">Contáctanos</h2>
+            <p class="text-center mb-4">Reserva tu viaje o solicita más información. Estamos aquí para ayudarte a planear la aventura de tus sueños.</p>
+            <form>
+                <div class="mb-3">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input type="text" class="form-control" id="nombre" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="mensaje" class="form-label">Mensaje</label>
+                    <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
+            <div class="alert alert-success mt-3" role="alert" id="success-message" style="display: none;">
+                ¡Gracias por contactarnos! Te responderemos pronto.
+            </div>
+        </div>
+    </section>
+
+    <footer class="bg-dark text-white text-center py-3">
+        <p>&copy; 2024 Aventuras Boreales. Todos los derechos reservados.</p>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
